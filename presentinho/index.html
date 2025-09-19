@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Senha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #640f5a;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        #password-input {
+            width: 150px;
+            padding: 10px;
+            font-size: 1.2em;
+            text-align: center;
+            border-radius: 8px;
+            border: 2px solid #ff69b4;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+
+        #login-button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            background-color: #ff69b4;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #login-button:hover {
+            background-color: #e05e9c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Minha Senha</h1>
+        <p>Uma data especial para nós ❤️</p>
+        <input type="text" id="password-input" placeholder="DD-MM-AAAA">
+        <button id="login-button">Entrar</button>
+    </div>
+
+    <script>
+        const passwordInput = document.getElementById('password-input');
+        const loginButton = document.getElementById('login-button');
+
+        loginButton.addEventListener('click', function() {
+            const correctPassword = '31-07-2022'; 
+            
+            if (passwordInput.value === correctPassword) {
+                window.location.href = 'menu.html';
+            } else {
+                alert('Senha incorreta. Tente novamente!');
+            }
+        });
+
+        passwordInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                loginButton.click();
+            }
+        });
+    </script>
+
+</body>
+</html>

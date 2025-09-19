@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fundo branco */
+    color: #ff69b4; /* Rosa vibrante */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Estilo para o Menu do Nosso Amor */
+.menu-item {
+    background-color: #f7e6f6; /* Rosa claro para o card */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #ff69b4;
+    display: block;
+}
+
+.menu-item img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Estilo para a Galeria de Fotos */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+    text-decoration: none;
+    color: #ff69b4;
+    font-size: 1.2em;
+    float: left;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o Temporizador */
+.timer-display {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Para garantir que se ajusta em telas pequenas */
+}
+
+.timer-block {
+    background-color: #f7e6f6;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80px;
+    margin: 5px;
+}
+
+.timer-block span {
+    display: block;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.timer-block p {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.love-message {
+    margin-top: 30px;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #ff69b4;
+}
