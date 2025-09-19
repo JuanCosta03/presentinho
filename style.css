@@ -40,6 +40,7 @@ body {
 }
 
 .menu-item img {
+    /* Esta regra não será usada, mas é bom mantê-la para referência */
     width: 64px;
     height: 64px;
     margin-bottom: 10px;
