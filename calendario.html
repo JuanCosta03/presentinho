@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-button">← Voltar</a>
+        <a href="menu.html" class="back-button">← Voltar</a>
         <h1>Nossa jornada do amor</h1>
         <p class="subtitle">Há quanto tempo estamos juntos?</p>
         <div class="timer-display">
@@ -43,8 +43,7 @@
     </div>
 
     <script>
-        // Data de início do namoro
-        const startDate = new Date('2022-07-31T00:00:00'); // ANO, MÊS (0-11), DIA
+        const startDate = new Date('2022-07-31T00:00:00');
 
         function updateTimer() {
             const now = new Date();
@@ -65,7 +64,6 @@
             let minutes = Math.floor(remainingSeconds / 60);
             let seconds = Math.floor(remainingSeconds % 60);
 
-            // Atualiza o texto na página
             document.getElementById('years').textContent = years;
             document.getElementById('months').textContent = months;
             document.getElementById('days').textContent = days;
@@ -74,7 +72,6 @@
             document.getElementById('seconds').textContent = seconds;
         }
 
-        // Atualiza a cada segundo
         setInterval(updateTimer, 1000);
         updateTimer();
     </script>
