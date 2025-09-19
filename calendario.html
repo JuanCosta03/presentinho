@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário do Amor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← Voltar</a>
+        <h1>Nossa jornada do amor</h1>
+        <p class="subtitle">Há quanto tempo estamos juntos?</p>
+        <div class="timer-display">
+            <div class="timer-block">
+                <span id="years">0</span>
+                <p>Anos</p>
+            </div>
+            <div class="timer-block">
+                <span id="months">0</span>
+                <p>Meses</p>
+            </div>
+            <div class="timer-block">
+                <span id="days">0</span>
+                <p>Dias</p>
+            </div>
+        </div>
+        <div class="timer-display">
+            <div class="timer-block">
+                <span id="hours">0</span>
+                <p>Horas</p>
+            </div>
+            <div class="timer-block">
+                <span id="minutes">0</span>
+                <p>Minutos</p>
+            </div>
+            <div class="timer-block">
+                <span id="seconds">0</span>
+                <p>Segundos</p>
+            </div>
+        </div>
+        <p class="love-message">Eu te amo todo esse tempo 🥰</p>
+    </div>
+
+    <script>
+        // Data de início do namoro
+        const startDate = new Date('2022-07-31T00:00:00'); // ANO, MÊS (0-11), DIA
+
+        function updateTimer() {
+            const now = new Date();
+            const diffInSeconds = (now - startDate) / 1000;
+
+            let years = Math.floor(diffInSeconds / (365.25 * 24 * 60 * 60));
+            let remainingSeconds = diffInSeconds % (365.25 * 24 * 60 * 60);
+
+            let months = Math.floor(remainingSeconds / (30.44 * 24 * 60 * 60));
+            remainingSeconds %= (30.44 * 24 * 60 * 60);
+
+            let days = Math.floor(remainingSeconds / (24 * 60 * 60));
+            remainingSeconds %= (24 * 60 * 60);
+
+            let hours = Math.floor(remainingSeconds / (60 * 60));
+            remainingSeconds %= (60 * 60);
+
+            let minutes = Math.floor(remainingSeconds / 60);
+            let seconds = Math.floor(remainingSeconds % 60);
+
+            // Atualiza o texto na página
+            document.getElementById('years').textContent = years;
+            document.getElementById('months').textContent = months;
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        // Atualiza a cada segundo
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>
